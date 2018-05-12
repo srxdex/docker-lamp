@@ -8,6 +8,8 @@ services:
       - db:/var/lib/mysql
   php:
     build: ./php
+    environment:
+        password: lamokona12
     ports:
       - '80:80'
     volumes:
