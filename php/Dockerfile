@@ -3,5 +3,3 @@ COPY php.ini /usr/local/etc/php/
 RUN apt-get update \
   && apt-get install -y git libfreetype6-dev libjpeg62-turbo-dev libpng12-dev libmcrypt-dev \
   && docker-php-ext-install pdo_mysql mysqli mbstring gd iconv mcrypt
-ARG password
-RUN git clone https://gatodex:$password@bitbucket.org/gatodex/catalogo_fork.git
